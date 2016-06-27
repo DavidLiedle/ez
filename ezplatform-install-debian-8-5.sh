@@ -8,6 +8,9 @@
 # install on an existing system, you may just want to read the commands below to
 # see which ones you need to run to get your system ready.
 #
+# Known Issues:
+# - Running as root pretty much negates the whole -qq quiet flag for apt-get :(
+#
 # TEST LOG:
 # 20160627 DigitalOcean Debian 8.5x64 Droplet, 512 MB RAM / 20GB Disk | OK
 #          ssh root@ip means running this script as root by default...
