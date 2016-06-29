@@ -1,5 +1,7 @@
 # ez
-Shell scripting to automate all the eZ Platform things!
+Shell scripting to automate all the eZ Platform things! I'm working on updates
+and fixes to our installation documentation at https://doc.ez.no/display/DEVELOPER/Step+1%3A+Installation
+and, of course, manually testing the steps to make sure they're correct. :)
 
 ## Purpose
 I'm installing eZ Platform from scratch on fresh servers over and over again.
