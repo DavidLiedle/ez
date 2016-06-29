@@ -1,0 +1,20 @@
+#!/bin/bash
+# For boolean flags, you can use yes or no.
+# The opt_swap_size must be numeric only. Gigabytes will be considered.
+# The opt_www_dir is your www base folder. Normally /var/www/html/
+# The opt_ezp_folder (inside opt_www_dir) is the folder you want to install eZ Platform
+opt_apache_group=www-data
+opt_apache_user=www-data
+opt_install_composer=yes
+opt_install_emacs=yes
+opt_install_mariadb=yes
+opt_install_memcached=yes
+opt_install_mosh=yes
+opt_install_mysql=no
+opt_install_varnish=yes
+opt_install_vim=yes
+opt_set_swap=yes
+opt_swap_size=4
+opt_update_system=yes
+opt_www_dir=/var/www/html
+opt_ezp_folder=ezplatform
