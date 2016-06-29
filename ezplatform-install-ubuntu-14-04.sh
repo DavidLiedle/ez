@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 ################################################################################
-# eZ Platform Debian 8.5 Install Script
+# eZ Platform Ubuntu 14.04 Install Script
 #
 # WORK IN PROGRESS! THIS DOES NOT FULLY INSTALL eZ Platform YET!
 #
@@ -12,19 +12,11 @@
 # - Running as root pretty much negates the whole -qq quiet flag for apt-get :(
 #
 # TEST LOG:
-# 20160627 DigitalOcean Debian 8.5x64 Droplet, 512 MB RAM / 20GB Disk | OK
+# 20160627 DigitalOcean Ubuntu 14.04.4x64 Droplet, 512 MB RAM / 20GB Disk | OK
 #          ssh root@ip means running this script as root by default...
 #
 
-export DEBIAN_FRONTEND=noninteractive
-
-export EZ_INSTALL_DIR=/var/www/
-export EZ_INSTALL_NAME=ezplatform
-
-echo $EZ_INSTALL_DIR$EZ_INSTALL_NAME
-exit 1
-
-echo "Welcome to the eZ Platform Debian 8.5 installer!"
+echo "Welcome to the eZ Platform Ubuntu 14.04 installer!"
 echo -n "Preparing the system for installation..."
 
 ################################################################## Ready System:
@@ -97,7 +89,7 @@ apt-get -qq -y install php5-cli \
                        php5-mcrypt   \
                        php5-curl      \
                        php5-gd         \
-                       php5-twig        \
+                       php5-twig        \ # Test on non-DO images?
                        php5-memcached
 echo "DONE!"
 echo
