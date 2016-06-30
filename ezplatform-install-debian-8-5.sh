@@ -21,9 +21,6 @@ export DEBIAN_FRONTEND=noninteractive
 export EZ_INSTALL_DIR=/var/www/
 export EZ_INSTALL_NAME=ezplatform
 
-echo $EZ_INSTALL_DIR$EZ_INSTALL_NAME
-exit 1
-
 echo "Welcome to the eZ Platform Debian 8.5 installer!"
 echo -n "Preparing the system for installation..."
 
