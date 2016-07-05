@@ -92,9 +92,10 @@ apt-get -qq -y install php5-cli \
                        php5-xsl    \
                        php5-intl    \
                        php5-mcrypt   \
-                       php5-curl      \
-                       php5-gd         \
-                       php5-twig        \
+                       php5-mysqlnd   \
+                       php5-curl       \
+                       php5-gd          \
+                       php5-twig         \
                        php5-memcached
 echo "DONE!"
 echo
@@ -131,10 +132,35 @@ git clone https://github.com/ezsystems/ezplatform.git
 echo "DONE!"
 echo
 
+# Composer Install of Dev Environment:
+# (Use `php -d memory_limit=-1 `which composer` install --no-dev` for prod)
+echo -n "Running Composer's install for a Developer environment..."
+cd /var/www/ezplatform
+php -d memory_limit=-1 /usr/local/bin/composer install
+echo "DONE!"
+echo
+
+# MySQL db creation:
+mysql -u root -e "create database ezplatform";
+
+# Run eZ Platform's installation for a clean production environment:
+php -d memory_limit=-1 app/console ezplatform:install --env prod clean
+
+# A good test of whether everything is configured properly
+# https://doc.ez.no/display/DEVELOPER/Devops
+#php app/console --env=prod cache:clear
+
+chown -R www-data:www-data /var/www/ezplatform
+
+# Copy the template vhost file for apache into the proper location:
+cp /var/www/ezplatform/doc/apache2/vhost.template /etc/apache2/sites-available/ezplatform.conf
+
 # TODO:
-# - cp example config file for apache...
-# - a2ensite ezplatform
-#   - Does this: cd /etc/apache2/sites-enabled; ln -s /etc/apache2/sites-available/ezplatform.conf ezplatform.conf
+# - MAGIC OCCURS substituting %IP_ADDRESS% and several other lines (TBD), perhaps with sed?
+
+
+a2ensite ezplatform
+a2dissite 000-default.conf # disable the default vhost
 
 # Restart apache (apachectl restart also works)
 echo -n "Restarting Apache 2..."
@@ -143,6 +169,7 @@ echo "DONE!"
 echo
 
 echo "System is now installed. You may disconnect your SSH session and re-connect via mosh."
+echo "BE SURE TO SET A ROOT PASSWORD FOR MYSQL! It is presently blank. Update in config as well."
 echo
 
 exit 0
