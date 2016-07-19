@@ -18,3 +18,11 @@
 #
 
 echo "Nothing here! Visit https://github.com/DavidLiedle/ez/blob/master/ezplatform-install-debian-8-5.sh"
+
+# Choose the type of install:
+# - Debian 8.5
+# - Ubuntu 16.04
+# Choose the type of stack:
+# - Apache2, MySQL, PHP5.6
+# - Nginx, MariaDB, PHP7
+#

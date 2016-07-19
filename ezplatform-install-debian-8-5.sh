@@ -25,6 +25,7 @@ echo "Welcome to the eZ Platform Debian 8.5 installer!"
 echo -n "Preparing the system for installation..."
 
 ################################################################## Ready System:
+# System updates:
 apt-get -qq -y update
 echo -n "."
 apt-get -qq -y upgrade
@@ -39,15 +40,29 @@ apt-get -qq -y install mosh
 echo "DONE!"
 echo
 
-# Install git:
-echo -n "Installing git..."
-apt-get -qq -y install git
+############################ VERY personal preferences for my DEV environment...
+# Install zsh:
+echo -n "Installing mosh for superior SSH connectivity..."
+apt-get -qq -y install mosh
 echo "DONE!"
+echo
+
+# Install htop:
+echo -n "Installing htop for memory/CPU monitoring..."
+apt-get -qq -y install htop
+echo "DONE! (Simply use 'free' if you don't need the whole ncurses UI...)"
 echo
 
 # Install a real text editor:
 echo -n "Installing emacs for text editing (vim is already available)..."
 apt-get -qq -y install emacs24-nox
+echo "DONE!"
+echo
+
+######################################################################## YGNI...
+# Install git:
+echo -n "Installing git..."
+apt-get -qq -y install git
 echo "DONE!"
 echo
 
