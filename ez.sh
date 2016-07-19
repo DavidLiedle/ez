@@ -26,3 +26,12 @@ echo "Nothing here! Visit https://github.com/DavidLiedle/ez/blob/master/ezplatfo
 # - Apache2, MySQL, PHP5.6
 # - Nginx, MariaDB, PHP7
 #
+
+# Utility functions:
+# - Sync latest ezsystems/ezplatform with my fork:
+# git fetch ezsystems
+# git checkout master
+# git rebase ezsystems/master
+# git push origina master
+#
+#
