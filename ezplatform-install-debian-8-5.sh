@@ -42,8 +42,8 @@ echo
 
 ############################ VERY personal preferences for my DEV environment...
 # Install zsh:
-echo -n "Installing mosh for superior SSH connectivity..."
-apt-get -qq -y install mosh
+echo -n "Installing zsh for CLI awesomeness..."
+apt-get -qq -y install zsh
 echo "DONE!"
 echo
 
