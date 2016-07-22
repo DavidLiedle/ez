@@ -32,6 +32,6 @@ echo "Nothing here! Visit https://github.com/DavidLiedle/ez/blob/master/ezplatfo
 # git fetch ezsystems
 # git checkout master
 # git rebase ezsystems/master
-# git push origina master
+# git push origin/master
 #
 #

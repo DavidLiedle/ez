@@ -14,7 +14,11 @@
 # TEST LOG:
 # 20160627 DigitalOcean Debian 8.5x64 Droplet, 512 MB RAM / 20GB Disk | OK
 #          ssh root@ip means running this script as root by default...
-#
+# 20160720 Amazon EC2-Micro Debian 8.5 Instance, 1 GB RAM / 8GB Disk | Fail
+#          Running as not-root requires the sudo command (actually present on
+#          the system, as opposed to the DO Droplet which doesn't even have the
+#          sudo command by default. Will require different commands.
+#          Manually running each command with sudo prepended should work.
 
 export DEBIAN_FRONTEND=noninteractive
 
