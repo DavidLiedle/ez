@@ -50,6 +50,9 @@ echo -n "Installing zsh for CLI awesomeness..."
 apt-get -qq -y install zsh
 echo "DONE!"
 echo
+# Set it as your default with `chsh -s /usr/bin/zsh`
+# ohmyz.sh:
+# sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install htop:
 echo -n "Installing htop for memory/CPU monitoring..."
