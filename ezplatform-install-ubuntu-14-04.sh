@@ -130,6 +130,7 @@ echo
 # - cp example config file for apache...
 # - a2ensite ezplatform
 #   - Does this: cd /etc/apache2/sites-enabled; ln -s /etc/apache2/sites-available/ezplatform.conf ezplatform.conf
+# - git config --global push.default simple
 
 # Restart apache (apachectl restart also works)
 echo -n "Restarting Apache 2..."

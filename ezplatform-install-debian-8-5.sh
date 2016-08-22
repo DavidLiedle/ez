@@ -179,7 +179,7 @@ cp /var/www/ezplatform/doc/apache2/vhost.template /etc/apache2/sites-available/e
 
 # TODO:
 # - MAGIC OCCURS substituting %IP_ADDRESS% and several other lines (TBD), perhaps with sed?
-
+# - git config --global push.default simple
 
 a2ensite ezplatform
 a2dissite 000-default.conf # disable the default vhost
