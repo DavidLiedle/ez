@@ -1,0 +1,10 @@
+{
+    "filename": "repositories.json",
+    "description": "This versioned file tracks eZ-related repositories for usage within the ez CLI tool",
+    "repositories": [
+	{
+	    "organization": "",
+	    "repository": "ezplatform"
+	}
+    ]
+}
