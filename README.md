@@ -2,6 +2,8 @@
 
 [![Gitter](https://badges.gitter.im/ez-cli.svg)](https://gitter.im/ez-cli?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
+Pretty Docs: https://davidliedle.github.io/ez/
+
 # ez (CLI Command / Toolkit)
 Shell scripting to automate all the eZ Platform things! I'm working on updates
 and fixes to our installation documentation at
